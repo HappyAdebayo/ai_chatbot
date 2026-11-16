@@ -8,6 +8,9 @@ while True:
         print("Exiting the chat. Goodbye!")
         break
 
-    print("Assistant: ", end="", flush=True)
+    if not user_input:
+        print("Please enter a message")
+        continue
 
+    print("Assistant: ", end="", flush=True)
     chat_with_assistant(user_input)
